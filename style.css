@@ -1,0 +1,28 @@
+/* Basic reset */
+*{ margin:0; padding:0; box-sizing:border-box;}
+body{ font-family:Arial,sans-serif; scroll-behavior: smooth;}
+
+header nav{ background:#111; padding:15px;}
+header nav ul{ display:flex; justify-content:center; gap:30px;}
+header nav ul li a{ color:#fff; text-decoration:none; font-weight:500; transition:0.3s;}
+header nav ul li a:hover{ color:#00eaff;}
+
+/* Hero */
+.hero{ height:90vh; background:#0d0d0d; color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; animation:fadeIn 1.5s ease;}
+.hero span{ color:#00eaff; animation:colorPulse 2s infinite alternate;}
+
+/* Sections */
+.content-section{ padding:80px 20px; animation:fadeSlideUp 1s ease;}
+.skills-container{ display:flex; gap:15px; justify-content:center; flex-wrap:wrap;}
+.skill{ background:#00eaff; color:#111; padding:10px 20px; border-radius:6px; transform:scale(0); animation:grow 0.8s ease forwards;}
+
+.project-card{ background:#111; color:#fff; padding:15px; margin:10px; border-radius:8px; transition:0.3s;}
+.project-card:hover{ transform:scale(1.05); background:#00eaff; color:#000;}
+
+/* Animations */
+@keyframes fadeIn{ from{opacity:0;} to{opacity:1;}}
+@keyframes colorPulse{ from{color:#00eaff;} to{color:#ff007f;}}
+@keyframes fadeSlideUp{ from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);}
+}
+@keyframes grow{ from{transform:scale(0);} to{transform:scale(1);}
+}
